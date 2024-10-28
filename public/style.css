@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: #fd5f00;
+}
+
+.layout-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: row;
+}
+
+/* Left section */
+.left-section {
+  flex: 1;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* text-align: center; */
+  color: white;
+
+  .header-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+
+    .score {
+      font-size: 18px;
+    }
+  }
+
+}
+
+/* Right section with scroll */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.right-section .chart {
+  display: flex;
+  flex: 1 0 90%;
+  max-height: 90%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  text-align: center;
+  color: #333;
+}
+
+.chart {
+  padding: 1em;
+}
+
+.right-section .chart:nth-child(2n) {
+  background-color: #dfdfdf;
+}
+
+#pieChart {
+  padding: 2% 0;
+}
+
+/* For mobile viewports: stacked charts in a horizontally scrollable section */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    flex: 0 0 50%;
+  }
+
+  .right-section {
+    flex-direction: row;
+    /* overflow-y: hidden; */
+    overflow-x: auto;
+  }
+
+  .right-section .chart {
+    flex: 1 0 90%;
+    max-width: 90%;
+    max-height: 100%;
+  }
+
+}

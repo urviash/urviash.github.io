@@ -1,0 +1,43 @@
+<!-- TO DO: chart canvas resizing on viewport resizing -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LitterTRAK viz</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+  </head>
+  <body>
+    <div class="layout-container">
+        <div class="left-section chart">
+          <div class="header-section">
+            <div id="prompt">
+              <p>How many tires can you pick up?</p>
+              <p>Rummage through the data >></p>
+            </div>
+            <div class="score">
+              &#9881; <span id="tireBags">0</span>
+            </div>
+          </div>
+          <canvas id="stackedChart"></canvas>
+        </div>
+        <div class="right-section">
+          <div class="chart">
+            <canvas id="areaChart"></canvas>
+          </div>
+          <div class="chart">
+            <canvas id="pieChart"></canvas>
+          </div>
+          <div class="chart">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+    </div>
+
+    <script src="../public/main.js" type="module"></script>
+  </body>
+</html>
