@@ -53,7 +53,7 @@ function chartArea(data) {
     options: {
       scales: {
         x: {
-          type: 'time', // Make the x-axis time-based
+          type: 'timeseries', // Make the x-axis time-based
           time: {
             unit: 'month', // Customize to 'day', 'month', etc.
           },
