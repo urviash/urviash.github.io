@@ -22,9 +22,9 @@ function chartArea(data) {
       const monthYear = `${date.getFullYear()}-${date.getMonth() + 1}`;
       const totalBags = parseInt(item.total_bags_litter);
 
-      if (!acc[monthYear]) {
+      if ((date.getFullYear() > 2021) && !acc[monthYear]) {
           acc[monthYear] = totalBags;
-      } else {
+      } else if ((date.getFullYear() > 2021)) {
           acc[monthYear] += totalBags;
       }
 
